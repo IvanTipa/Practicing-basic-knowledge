@@ -21,10 +21,10 @@ const personalMovieDB = {
 
 function rememberMyFilms() {
     for (let i = 0; i < 2; i++) {
-        const a = prompt('Один из последних просмотренных фильмов?', ''),
+        const a = prompt('Один из последних просмотренных фильмов?', '').trim(),
               b = prompt('На сколько вы его оцениваете?', '');
     
-        if (a != null && b != null && a != '' && b !='' && a.length < 50) { // проверка на пустую строку, строку не более 50 символов, а также нажатие отмена
+        if (a != null && b != null && a != '' && b !='' && a.length < 50 ) { // проверка на пустую строку, строку не более 50 символов, а также нажатие отмена
             personalMovieDB.movies[a] = b;
             console.log('Done');
         } else {
